@@ -62,3 +62,5 @@ UI автотесты для веб-приложения Stellar Burgers.
 
 pytest
 
+pytest --alluredir=allure_results
+allure serve allure_results
