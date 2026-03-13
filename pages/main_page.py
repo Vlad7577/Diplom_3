@@ -1,17 +1,28 @@
 import allure
 from pages.base_page import BasePage
 from locators.main_page_locators import MainPageLocators
+<<<<<<< HEAD
 from urls import BASE_URL
+=======
+>>>>>>> 7be5eb6b022f54b90bee01de82e37b26eebf1ee3
 
 
 class MainPage(BasePage):
 
+<<<<<<< HEAD
     def __init__(self, driver):
         super().__init__(driver)
 
     @allure.step("Открыть главную страницу")
     def open_main_page(self):
         self.open(BASE_URL)
+=======
+    URL = "https://stellarburgers.education-services.ru/"
+
+    @allure.step("Открыть главную страницу")
+    def open_main_page(self):
+        self.open(self.URL)
+>>>>>>> 7be5eb6b022f54b90bee01de82e37b26eebf1ee3
 
     @allure.step("Перейти в Конструктор")
     def click_constructor(self):
@@ -29,6 +40,7 @@ class MainPage(BasePage):
     def close_modal(self):
         self.click(MainPageLocators.CLOSE_MODAL_BUTTON)
 
+<<<<<<< HEAD
     @allure.step("Проверить отображение модального окна")
     def is_modal_visible(self):
         return self.find_element(MainPageLocators.MODAL)
@@ -92,3 +104,8 @@ class MainPage(BasePage):
     @allure.step("Проверить отображение ленты заказов")
     def is_order_feed_visible(self):
         return self.find_element(MainPageLocators.ORDER_FEED_BUTTON)
+=======
+    @allure.step("Получить счетчик ингредиента")
+    def get_counter(self):
+        return self.get_text(MainPageLocators.INGREDIENT_COUNTER)
+>>>>>>> 7be5eb6b022f54b90bee01de82e37b26eebf1ee3
